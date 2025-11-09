@@ -29,9 +29,11 @@ def predict():
 
     response = {
         "comment": comment,
-        "prediction": "abusive" if pred == 1 else "safe",
+        "result": "Abusive" if pred == 1 else "Safe",
         "flag": bool(pred),
     }
+    
+    print(response)
 
     return jsonify(response)
 
